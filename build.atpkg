@@ -15,7 +15,7 @@
 (package
   :name "dummyPackageA"
 
-  :externals [
+  :external-packages [
     {
       :url "https://github.com/AnarchyTools/dummyPackageB.git"
       :branch "master"
@@ -25,10 +25,10 @@
   :tasks {
     :default {
       :tool "atllbuild"
-      :source ["src/**.swift"]
+      :sources ["src/**.swift"]
       :name "dummyPackageA"
-      :outputType "static-library"
-	  :dependencies ["dummyPackageB.default"]
+      :output-type "static-library"
+	    :dependencies ["dummyPackageB.default"]
     }
   }
 )
